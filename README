@@ -1,0 +1,23 @@
+After having initialized the directory for our project, first thing we want to do is to initialize Node.js into that directory.
+For that we will be using this command inside the terminal 
+    npm init -y
+Afterwards we need to install express by this command
+    npm install express
+And install jest for testing
+    npm install jest supertest --save-dev
+
+After having app.js api.js. and api.test.js initiated there is only one thing left to do before running tests - change the package.json configuration
+inside script tag we have to change value of test to jest like shown - 
+    "scripts": {
+        //....
+        "test": "jest"
+        //....
+    }
+
+Finally we can run npm test command to see if we passed the tests or no.
+
+in this project we have 4 different tests written
+1. checking if /api route is working successfully and returning 200 status
+2. checking if resposne from /api GET has property "message"
+3. checking if / route is workiing successfully and returning 200 status
+4. checking if resposne from / GET has property "message"
